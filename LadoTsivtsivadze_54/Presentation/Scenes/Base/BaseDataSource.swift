@@ -18,7 +18,7 @@ class BaseDataSource: NSObject {
         }
     }
     
-    func refresh() {
+    func refresh(with products: [ProductModel]) {
         
     }
     
