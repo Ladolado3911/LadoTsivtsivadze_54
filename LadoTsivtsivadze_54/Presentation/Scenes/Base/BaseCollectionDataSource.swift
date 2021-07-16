@@ -41,7 +41,6 @@ extension BaseCollectionDataSource: UICollectionViewDataSource, UICollectionView
         }
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items(for: section).count
     }
@@ -66,6 +65,11 @@ extension BaseCollectionDataSource: UICollectionViewDataSource, UICollectionView
         }
         
         return cell
+    }
+//    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (collectionView.bounds.width - 60) / 2
+        return CGSize(width: width, height: width)
     }
     
     func items(for section: Int) -> [CellItem] {
