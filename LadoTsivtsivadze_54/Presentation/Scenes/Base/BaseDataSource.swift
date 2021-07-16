@@ -96,6 +96,10 @@ protocol CellConfigurable: UITableViewCell {
     func configure(with item: CellItem)
 }
 
+protocol CellConfigurableCollection: UICollectionViewCell {
+    func configure(with item: CellItem)
+}
+
 protocol CellItem {
     var cellIdentifier: String { get }
 }
